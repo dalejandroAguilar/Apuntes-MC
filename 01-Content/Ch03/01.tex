@@ -1,0 +1,194 @@
+\section{Operadores de evolución temporal}
+\[
+\ket{\psi}\then\vu{A}\ket{\psi}=\ket{\psi}
+\]
+
+Ahora, queremos ver cómo los estados evolucionan.
+
+\begin{definition}[Operador de evolución $\vu{U}$]
+\begin{align*}
+    \vu{U}:\hilb&\then\hilb \\
+    \ket{\psi(t)}&\then\vu{U}\ket{\psi(t)}=\ket{\psi(t+\Delta t)}\\
+\end{align*}
+
+\end{definition}
+
+En la base generadora $\qty{\ket{e_i}}$ se tiene
+
+\begin{equation}
+    \ket{\psi(t)}=\sum_i\alpha_i(t)\ket{e_i}
+    \label{eq:e31}
+\end{equation}
+
+\begin{equation}
+\centering
+    \ket{\psi(t+\Delta t)}=\sum_i\alpha_i(t+\Delta t)\ket{e_i}
+    \label{eq:e32}
+\end{equation}
+
+\begin{align*}
+    \alpha_i(t+\Delta t)&=\bra{e_i}\ket{\psi(t+\Delta t)}\\
+    &=\mel{e_i}{\vu{U}}{\psi(t)}
+\end{align*}
+
+Usando \autoref{eq:e31}
+
+\begin{align}
+    \alpha_i(t+\Delta t)&=\sum_j \mel{e_i}{\vu{U}}{\psi(t)}\alpha_j\\
+    &=\sum_j U_{ij}\alpha_j(t)
+    \label{eq:e33}
+\end{align}
+
+$\vu{U}$ en la base $\qty{\ket{e_i}}$:
+
+\[
+    U_{ij}=\mel{e_i}{\vu{U}}{e_j}
+\]
+
+¿Qué forma tiene $U_{ij}$?
+
+En el momento inicial $\Delta t=0$
+
+Con \autoref{eq:e33}
+\[
+    \alpha_i(t)=\sum_j U_{ij}\alpha_j(t)
+\]
+
+Entonces $U_{ij}=\delta_{ij}$
+
+Ahora para un istante posterior $\Delta t\then 0$ y $\Delta\not=0$
+
+\[
+    U_{ij}=\delta_{ij}+\Delta t K_{ij}
+\]
+
+Tomo deliberadamente $K_{ij}=-\frac{\vb{i}}{\hbar}H_{ij}$.
+
+\begin{equation}
+\centering
+   U_{ij}=\delta_{ij}-\frac{\vb{i}}{\hbar}\Delta H_{ij}
+   \label{eq:e34}
+\end{equation}
+
+Remplazo en \autoref{eq:e33}
+
+\begin{align*}
+    \alpha_i(t+\Delta t)&=\sum_j \qty(\delta_{ij}-\frac{\vb{i}}{\hbar}\Delta t H_{ij})\alpha_j(t)\\
+    &=\sum_j\delta_{ij}\alpha_j(t)-\frac{\vb{i}}{\hbar}\Delta t\sum_j H_{ij}\alpha_j(t)\\
+    &=\alpha_i(t)-\frac{\vb{i}}{\hbar}\Delta t\sum_j H_{ij}\alpha_j(t)
+\end{align*}
+
+
+
+\begin{align*}
+    \text{lim}_{\Delta t\then 0} \qty[\vb{i}\hbar\qty(\frac{\alpha_i(t+\Delta t)-\alpha_i(t)}{\Delta t})]&=\sum_j H_{ij}\alpha_j(t)  \\
+    \vb{i}\hbar \dv{x} \alpha_i(t)&=
+\end{align*}
+
+\begin{equation}
+    \vb{i}\hbar \dv{x} \alpha_i(t)=\sum_j H_{ij}\alpha_j(t) 
+    \label{eq:coef_ev}
+\end{equation}
+
+Así se puede definir a \autoref{eq:coef_ev} como la ecuación de evolución temporal de los coeficientes de un estado.
+
+Del mismo modo $\ket{\psi(t)}=\sum_i\alpha_i(t)\ket{e_i}$ se define como la ecuación de evolución temporal de los estados.
+
+\begin{align*}
+   \vb{i}\hbar \dv{x} \bra{e_i}\ket{\psi(t)}&=\sum_j\mel{e_i}{\vu{H}}{e_j}\bra{e_j}\ket{\psi(t)}\\
+    &=\mel**{e_i}{\vu{H}}{\psi(t)}\qq{(Propiedad de clausura}\dyad{e_j}=I)\\
+    \qq{(Sólo}\ket{\psi(t)}\qq{depende de t)} \mel**{e_i}{\vb{i}\hbar \dv{x}}{\psi(t)}&=
+\end{align*}
+
+\begin{equation}
+\centering
+   \vb{i}\hbar\dv{t}\ket{\psi(t)}=\vu{H}\ket{\psi(t)}\qq{Ecuación de \perSch ket}
+   \label{eq:sch_ket}
+\end{equation}
+
+Considere que $\vu{H}$ es un operador hermítico por lo cual $\vu{H}=\vu{H}^*$, entonces
+
+\begin{equation}
+\centering
+   -\vb{i}\hbar\dv{t}\bra{\psi(t)}=\vu{H}\bra{\psi(t)}\qq{Ecuación de \perSch bra}
+   \label{eq:sch_bra}
+\end{equation}
+
+Con relación a \autoref{eq:sch_ket} y \autoref{eq:sch_bra} se toma a consideración 
+
+\begin{enumerate}[a)]
+    \item La ecuación de \perSch nos da la evolución temporal de los \textit{estados puros} del sistema.
+    \item Es una ecuación lineal, por lo cual se satisface el principio de superposición.
+    \item Durante la evolución del sistema la norma permanece constante.
+    \item Es la ecuación cuántica no relativista.
+    \item Describe partículas sin considerar el spín de la partícula.
+\end{enumerate}
+\begin{proof}
+    Procedamos a demostrar el literal c).
+    \begin{align*}
+        \ket{\Psi(t)}\qq{Evoluciona con el tiempo}\\
+        \dv{t}\norm{\psi(t)}^2&=\dv{t}(\bra{\psi(t)})\ket{\psi(t)}+\bra{\psi(t)}\dv{t}(\ket{\psi(t)})\\
+        \dv{t}\braket{\psi(t)}&=\frac{1}{-\hbar}\mel{\psi(t)}{\vu{H}}{\psi(t)}+\frac{1}{-\hbar}\mel{\psi(t)}{\vu{H}}{\psi(t)}\\
+        &=0\then\norm{\psi(t)}=\text{const}
+    \end{align*}
+\end{proof}
+
+
+
+\begin{example}[]
+    Se conoce de un sistema de partículas de spin 1/2 los valores medios de $\expval{S_x}\qc\expval{S_y}\qq{y}\expval{S_z}$. Con esta información determinar la matriz de densidad.
+    
+    \textit{Solución}
+    
+    La matriz de densidad tiene la forma
+    \[
+    \rho=\mqty(a&b\\c&d)
+    \]
+    Conocemos que las matrices para los spines son:
+    
+    \[
+    S_x=\mqty(0&\hbar/2\\\hbar/2&0)\qc S_y=\mqty(0&-i\hbar/2\\i\hbar/2&0)\qc S_x=\mqty(\hbar/2&0\\0&\hbar/2)
+    \]
+    
+    Se debe cumplir que
+    \[
+    \expval{S_x}_{\vu{\rho}}=Traza(\rho S_x)\qc\expval{S_y}_{\vu{\rho}}=Traza(\rho S_z)\qc\expval{S_z}_{\vu{\rho}}=Traza(\rho S_z)
+    \]
+\end{example}
+
+\begin{example}[Evolución temporal de un estado mezclado]
+    Sea un sistema físico $\vu{\rho}=\sum_i \ket{\psi_i}P_i\bra{\psi_i}$ Calcular $\dv{t}\vu{\rho}$.
+
+    \textit{Solución}
+    
+    \begin{align*}
+        \dv{t}\vu{\rho}&= \dv{t}\qty[\sum_i \ket{\psi_i}P_i\bra{\psi_i}]\\
+        &=\sum_i \qty[\dv{t}(\ket{\psi_i})P_i\bra{\psi_i} + \ket{\psi_i}P_i\dv{t}(\bra{\psi_i})]\\
+        &=\sum_i \qty[\frac{1}{i\hbar}\ket{\psi_i}P_i\bra{\psi_i} + \ket{\psi_i}P_i\frac{1}{-i\hbar}\bra{\psi_i}]\\
+        &=\frac{1}{i\hbar}\vu{H}\vu{\rho}-\frac{1}{i\hbar}\vu{\rho}\vu{H}
+    \end{align*}
+    Entonces
+    $$
+    i\hbar \dv{t}\vu{\rho}=\comm{\vu{H}}{\vu{\rho}}
+    $$   
+\end{example}
+
+\begin{example}[Evolución temporal de un valor medio]
+    Sea un $A(t)$ un observable físico asociado al operador hermítico $\vu{A}(t)$. Considere cómo evoluciona con el tiempo el valor medio de $A(t)$, $\expval{A}$  dado el sistema $\ketpsi$.
+    
+    \textit{Solución}
+    
+    
+    \begin{align*}
+        \dv{t}\expval{A}&=  \dv{t}\ev{\vu{A}}{\psi} \\
+         &=\dv{t}(\bra{\psi(t)})\vu{A}\ket{\psi(t)}+\qty[ \bra{\psi(t)}\dv{t}(\vu{A})\ket{\psi(t)}+\bra{\psi(t)}\vu{A}\dv{t}(\ket{\psi(t)})] \\
+         &=\frac{1}{i\hbar}\ev{\vu{H}\vu{A}}{\psi}+\expval{\pdv{A}{t}}+\frac{1}{-i\hbar}\ev{\vu{A}\vu{H}}{\psi}\\
+         &=\expval{\pdv{A}{t}}+\frac{i}{\hbar}\ev{\vu{H}\vu{A}-\vu{A}\vu{H}}{\psi}\\
+         &=\expval{\pdv{A}{t}}+\frac{i}{\hbar}\ev**{\comm{\vu{H}}{\vu{A}}}{\psi}
+    \end{align*}
+
+\end{example}
+
+\subsubsection{iii Postulado}
+
+En el continuo del tiempo entre dos medidas consecutivas los estados puros de un sistema físico siguen siendo puros y cualquier vector de estado \ketpsi evoluciona de acuerdo a la ecuación de \perSch. ¿Un estado mezclado evoluciona en un estado mezclado?

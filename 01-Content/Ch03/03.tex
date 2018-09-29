@@ -1,0 +1,157 @@
+\section{Conservación de la probabilidad}
+\subsection{Estados estacionarios}
+
+\begin{definition}[Estado estacionario]
+    Si un estado $\ketphi$ es un estado propio de energía d un sistema (i.e $\vu{H}=E\ketphi$) entonces se dice que $\ketphi$ es un estado estacionario.
+\end{definition}
+
+$$
+    \vu{H}\ketphi=E\ketphi
+$$
+
+$$
+  \vu{H}=i\hbar\dv{t}  \qc\ketphi=\phi(\vb*{r},t)
+$$
+
+$$
+    i\hbar\dv{t}\phi=E\phi\then\phi=\text{const}e^{-\frac{iE}{\hbar}t}
+$$
+
+Es llamada la solución estacionaria.
+
+\subsubsection{iv) Postulado:}
+El único posible resultado de la medición de una cantidad física $A$ es uno de los valores propios del correspondiente operador hermítico $\vu{A}$ asociado.
+
+De resultado se pueden hacer algunas acotaciones:
+\begin{enumerate}[i)]
+    \item La medida de $A$ debe ser un número real, lo cual está garantizado por la hermiticidad del operador.
+    \item Si el espectro del operador $\vu{A}$ es discreto, los resultados que se pueden obtener está cuantizados. 
+\end{enumerate}
+
+Considere, ahora, un sistema de estado $\ketpsi$ normalizado ($\braket{\psi}=1$. Determinaos el resultado de medir el observable $A$ y la probabilidad de obtener esa medición.
+
+Procedo a discriminar el espectro del operador $\vu{A}$ por casos:
+
+\begin{enumerate}[\textbf{a)}]
+    \item \textbf{Discreto}
+    $$
+        A\then\vu{A}
+    $$
+    
+    $$
+        \vu{A}\ket{a_i}=a_i\ket{a_i}
+    $$
+    Donde $\ket{a_i}$ son los vectores propios y $a_i$ son los valores propios asociados al vector propio i-ésimo.
+    
+    Se tiene dos casos, uno con degeneración y sin degeneración.
+    
+    \begin{itemize}
+        \item \textbf{Sin degeneración:} A cada valor propio $a_i$ le corresponde un único vector propio $\ket{a_i}$ en la base propia $\{\ket{a}\}$.
+        $$
+            \forall\ketpsi\in\hilb:\ketpsi=\sum_i^n\alpha_i\ket{a_i}\qq{con}\alpha_i=\braket{a_i}{\psi}
+        $$
+
+        Sabemos que el sistema está en un estado normalizado. Entonces la suma de todas probabilidades de que se haga una medición i-ésima es la unidad.
+        $$  
+          \sum_i^n\pro_i&=\braket{\psi}&=1  
+        $$
+        
+        \begin{align*}
+            \sum_i^n\pro_i&=\braket{\psi}\\
+            &=\sum_i\braket{\psi}{a_i}\braket{a_i}{\psi}\\
+        \end{align*}
+        De aquí, definiendo a $\pro_i=\pro(a_i)$, se deduce que 
+        \begin{align*}
+            \pro(a_i)&=\braket{\psi}{a_i}\braket{a_i}{\psi}\\
+            &=\braket{a_i}{\psi}^*\braket{a_i}{\psi}\\
+            &=\alpha_i^*\alpha_i
+        \end{align*}
+        en donde se comprueba que $\sum_i^n\pro_i=1$.
+        
+        \item \textbf{Con degeneración:} Sea $g$ el grado de degeneración.
+
+        
+        $$
+            \vu{A}\ket{a_j^i}=a_i\ket{a_j^i}\qc i=1,2,..g_j
+        $$
+        
+        La base propia es $\qty{\ket{a_j^i}}$.
+        $$
+            \forall\ketpsi\in\hilb:\ketpsi=\sum_{j=1}^n\sum_{i=1}^{g_j} \alpha_j^i\ket{a_j^i}\qc \alpha_j^i=\braket{a_j}{\psi}
+        $$
+        De manera análoga se encuentra que
+        
+        \begin{align*}
+            \pro(a_k)&=\sum_{i=1}^{g_k}{\alpha_k^i}^*\alpha_k^i\\
+            &=\sum_{i=1}^{g_k}\abs{\alpha_k^i}^2\\
+            &=\sum_{i=1}^{g_k}\abs{\braket{a_k^i}{\psi}}^2
+        \end{align*}
+        
+        Se comprueba que $\sum_k\pro(a_k)=1$.
+    \end{itemize}
+    
+    \item \textbf{Continuo:} El espectro del operador $\vu{A}$ asociado al observable $A$ es un espectro continuo.
+    
+    $$
+        \vu{A}\ket{a_\alpha}=\alpha\ket{a_\alpha}\qc\qty{\ket{a_\alpha}}\qq{es una base continua}
+    $$
+    $$
+            \forall\ketpsi\in\hilb:\ketpsi=\int C(\alpha)\ket{a_\alpha}\dd\alpha \qc C(\alpha)=\braket{a_\alpha}{\psi}
+    $$
+    
+    La probabilidad de encontrar un valor entre $\alpha$ y $\alpha+\dd\apha$ es
+    
+    $$
+        \dd\pro(\alpha)=\rho(\alpha)\dd\alpha\qc\qq{con}\rho=C^*(\alpha)C(\alpha)=\abs{\braket{a_\alpha}{\psi}}^2
+    $$
+    $$
+        \pro(\alpha)=\int_{\alpha_1}^{\alpha_2}\rho(\alpha)\dd\alpha\qq{entre}\alpha_1\qq{y}\alpha_2
+    $$
+\end{enumerate}
+
+\begin{example}[Energía de transición]
+    Considerar un sistema físico que tiene dos estados base ($\ket{e_1}$ y $\ket{e_2}$). Determinar la evolución temporal de un estado \ketpsi.
+    
+    \textit{Solución:}
+    
+    Como
+    $$
+    \ketphi=\sum_{i=1}^2\alpha(t)_i\ket{e_i}
+    $$
+    vasta con estudiar la evolución de los coeficientes $\alpha$
+    
+    Usando la relación \autoref{eq:coef_ev}
+    $$
+    \vb{i}\hbar \dv{x} \alpha_i(t)=\sum_j H_{ij}\alpha_j(t) 
+    $$
+    se tiene que
+    
+    \begin{align*}
+        &i\hbar\dv{t}\alpha_1(t)=H_{11}\alpha_1(t)+H_{12}\alpha_2(t)\\
+        &i\hbar\dv{t}\alpha_2(t)=H_{21}\alpha_1(t)+H_{22}\alpha_2(t)
+    \end{align*}
+    
+    , en donde
+    
+    $$
+    H_{11}=\mel{e_1}{\vu{H}}{e_1}\qc H_{21}=\mel{e_2}{\vu{H}}{e_1}\qc H_{12}=\mel{e_1}{\vu{H}}{e_2}\qc H_{22}=\mel{e_2}{\vu{H}}{e_2}
+    $$
+    
+    Aquí tanto $H_{11}$ como $H_{22}$ representan los valores medios de energía en los niveles $\ket{e_1}$ y $\ket{e_2}$ respectivamente. $H_{12}$ y $H_{21}$ representa las energías de transición de estados $2\then 1$ y $1\then 2$ respectivamente.
+    
+    Para simplificar el problema vamos a suponer que $H_{12}=H_{21}=H'$. Así
+    
+    \begin{align*}
+        &i\hbar\dv{t}\alpha_1(t)=H_{11}\alpha_1(t)+H'\alpha_2(t)\\
+        &i\hbar\dv{t}\alpha_2(t)=H'\alpha_1(t)+H_{22}\alpha_2(t)
+    \end{align*}
+    
+    y se resuelve en sistema de ecuaciones diferenciales.
+    % $$
+    % \pmat{3} 
+    % $$
+\end{example}
+
+\subsubsection{v) Postulado:} Cuando la amplitud física $A$ es medida sobre un sistema en un estado normalizado $\ketpsi$ ($\braket{\psi}$) la probabilidad $P(a_n)$ de obtener el valor propio no degenerado $a_n$ del observable $A$ es $\abs{\braket{a_n}{\psi}}^2$, donde $\ket{a_n}$ es el vector propio de $\vu{A}$ asociado al valor propio $a_n$.
+
+Para facilitar la

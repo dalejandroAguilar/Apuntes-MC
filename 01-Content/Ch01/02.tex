@@ -1,0 +1,312 @@
+\section{Espacios de Hilbert, Operadores, Notación de Dirac}
+
+\subsection{Espacios de Hibert}
+
+\begin{definition}[Espacio de Hilbert H]
+    Son espacios normados completos y lineales que tienen definido un producto escalar (o interno) $(\cdot,\cdot)$.
+\end{definition}
+
+$\qq*{Sea}\psi,~\phi,~\xi\qq{un conjunto de verctores y}a,~b,~c$ un conjunto de escalares. El producto interno de H cumple con 4 propiedades:
+
+\begin{enumerate}[i.]
+    \item Se satisface que
+    \[  
+        \qty(\psi,\phi)=\qty(\phi,\psi)^*.
+    \]
+    \item El producto escalar debe ser lineal con respecto a la segunda componente. 
+    \[  
+        \qty(\psi,a\phi_1+b\phi_2)=a\qty(\psi,\phi_2)+b\qty(\psi,\phi_1)
+    \]
+    \item El producto escalar debe ser antilineal con respecto a la primera componente. 
+    \[  
+        \qty(a\psi_1+b\psi_2,\phi)=a^*\qty(\psi_1,\phi)+b^*\qty(\psi_2,\phi)
+    \]
+    \item $\qty(\psi,\psi)=\norm{\psi}^2\geq 0$.
+\end{enumerate}
+
+
+\begin{recordar}
+    
+\end{recordar}
+
+\begin{example}
+\end{example}
+
+
+\subsection{Notación de Dirac}
+\subsubsection{Propiedades de los bra-kets}
+
+\begin{enumerate}[a)]
+    \item $\ket{\psi}\then\bra{\psi}=\qty(\ket{\psi})^*$.
+    \item $a\ket{\psi}+b\ket{\phi}\then a^*\bra{\psi}+b^*\bra{\phi}=(a\ket{\psi}+b\ket{\phi})^*$.
+    \item $\ket{a\psi}=a\ket{\psi}\then\bra{a\psi}=a^*\bra{\psi}$.
+    \item El producto interno no conmuta  $\braket{\psi}{\phi}\not=\braket{\phi}{\psi}\qq{;}\braket{\psi}{\phi}=\braket{\phi}{\psi}^*$.
+    \item Distributiva $\braket{\psi}{a_1\psi_1+a_2\psi_2}=a_1\braket{\psi}{\psi_1}+a_2\braket{\psi}{\psi_2}$.
+    \item Distributiva $\braket{a_1\psi_1+a_2\psi_2}{\psi}={a_1}^*\braket{\psi_1}{\psi}+{a_2}^*\braket{\psi_2}{\psi}$.
+    
+    \item La norma es positiva $\norm{\psi}=\braket{\psi}\geq0$. Y si $\ket{\psi}=\ket{0}\then\norm{\psi}=0$.
+    
+    Si $\braket{\psi}=1$ se dice que es un estado normalizado.
+    
+    \item Desigualdad de Schwarz: Para $\ket{\psi},~\ket{\phi}\in\hilb$ se cumple
+    \[ \abs{\braket{\psi}{\phi}}^2\leq\braket{\psi}\braket{\phi}. \]
+    \item Desigualdad triangular:
+    \[ \sqrt{\braket{\psi+\phi}}\leq\sqrt{\braket{\psi}}+\sqrt{\braket{\phi}}. \]
+    \item Ortonormalidad: Para $\ket{\psi},~\ket{\phi}\in\hilb$ se dice que son ortonormales si. $\braket{\psi}{\phi}=0$ y $\braket{\psi}=\braket{\phi}=1$.
+    
+\end{enumerate}
+
+
+\begin{example}[Cómo entrenar a tu dragón.]
+No se\\
+Ni mergas buey $\alpha^x$
+\end{example}
+
+\subsubsection{Propiedades no permitidas}
+
+Sean \ketpsi y \ketphi elementos de \hilb, las operaciones como:
+
+\[
+    \hetpsi\ketphi\qq{y}\brapsi\braphi
+\]
+
+no están permitidas (no tienen sentido físico).
+
+Se puede pensar en este tipo de operaciones si \ketpsi y \ketphi pertenecen a diferentes espacios vectoriales.
+
+\begin{example}[Operadores]
+    Dado
+    \[
+        \ketpsi=\mqty(3i\\2+i\\4),~~\ketphi=\mqty(2\\-i\\2-3i)
+    \]
+    Calcular:
+    \begin{enumerate}[a) ]
+        \item \brapsi
+        \item \braphi\ketpsi
+        \item \ketpsi\ketphi y \brapsi\braphi
+    \end{enumerate}
+    
+    \textit{Solución:}
+    
+    \begin{enumerate}[a) ]
+        \item 
+        \begin{align*}
+            \brapsi&=(\ketpsi)^*\\
+            &=\mqty(-3i&2-i&4)
+        \end{align*}
+        \item 
+        \begin{align*}
+            \braphi\ketpsi&=(\ketpsi)^*\\
+            &=\mqty(2&+i&2+3i)\mqty(3i\\2+i\\4)\\
+            &=8i+7
+        \end{align*}
+        \item No es posible operar \ketpsi\ketphi ni \brapsi\braphi porque tienen dimensiones incompatibles.
+    \end{enumerate}
+\end{example}
+
+\subsubsection{Sentido físico del producto interno}
+\braketba Representa la proyección del estado \ketpsi sobre el estado \ketphi. Otra interpretación es que representa la amplitud de probabilidad de que el sistema que se encuentra en el estado \ketpsi, después de una medición, pase al estado \ketphi.
+
+\begin{example}[Operadores]
+    Considere los estados $\ketpsi=3i\ket{\phi_1}-7i\ket{\phi_2}$ y $\ketchi=-\ket{\phi_1}+2\ket{\phi_2}$ donde $\ket{\phi_1}$ y $\ket{\phi_2}$ son ortonormales.
+    \begin{enumerate}
+        \item Calcular \braketac y \braketca.
+        \item Demostrar que \ketpsi y \ketchi satisface la desigualdad de Cauchy-Schwartz y la del triangulo.
+    \end{enumerate}
+    
+\end{example}
+
+\subsubsection{ii. Postulado}
+
+A cada observable de un sistema físico se lo representa, en mecánica cuántica, mediante un operador lineal autoadjunto que actúa en el espacio de Hilbert \hilb asociado al sistema.
+
+Sea $A$ un observable, y $\vu{A}$ su operador hermítico asociado:
+
+\begin{align*}
+    \vu{A}:\hilb\then\hilb
+    \ketpsi\then\vu{A}\ketpsi=\ket{\psi'}
+\end{align*}
+
+$$
+    \ket{\psi},~\ket{\psi'}\in\hilb
+$$
+
+Se sigue que
+
+\begin{itemize}
+    \item $\vu{A}$ debe ser lineal para cumplir con el principio de superpocisión:\\
+    $\vu{A}(\ketpsi+a\ketphi)=\vu{A}\ketpsi+a\vu{A}\ketphi$
+    \item $\vu{A}$ debe ser ortogonal:\\
+    $ \braket{\psi}{\vu{A}\phi}=\braket{\vu{A}\psi}{\phi}\qq{o analíticamente}\vu{A}=\vu{A}^*$
+\end{itemize}
+
+$\vu{A}$ debe ser lineal para cumplir con el principio de superposición:\\
+    $\vu{A}(\ketpsi+a\ketphi)=\vu{A}\ketpsi+a\vu{A}\ketphi$
+    
+\newtheorem{theorem}{Teorema}
+\begin{theorem}
+    Sea $A$ un observable, $\vu{A}$ es un operador autoadjunto  al observable $A$. Los valores propios de $\vu{A}$ son reales y los vectores propios correspondientes a los valores propios distintos ortogonales. Matemáticamente es:
+    $$
+        A\then\vu{A}
+    $$
+    \begin{align*}
+        \vu{A}:\hilb\then\hilb\\
+        \ketpsi\then\vu{A}\ketps
+    \end{align*}
+    En caso de cumplirse
+    \begin{align*}
+        &\vu{A}\ketphi=\lambda\ketphi\\
+        \ketphi&\qq{Son los vectores propios de }\vu{A}.\\
+        \lambda&\qq{Son los valores propios de }\vu{A}.\\
+    \end{align*}
+
+\end{theorem}
+
+\begin{proof}
+    Por demostrar
+\end{proof}
+
+En mecánica cuántica, el resultado de las mediciones de los observables son los \textit{valores propios} (valores reales) de los operadores hermíticos asociados.
+\begin{align*}
+    \vu{A}\ket{\phi_i}=\lambda_i\ket{\phi_i}
+\end{align*}
+$\ket{\psi_1},\ket{\psi_2},...,\ket{\psi_n}$ son vectores propios de $\vu{A}$ también construimos una base generadora.
+
+\begin{align*}
+    \{\ket{\psi_1},\ket{\psi_2},...,\ket{\psi_n}\}
+\end{align*}
+
+
+\begin{align*}
+    \hilb\then\{\ket{e_i}\}\\
+    \ketpsi\in\hilb\then\ketpsi=\sum_i^n\alpha_i\ket{e_i}\\
+    \braket{e_i}{\pis}&=\sum_i^n\alpha_i\braket{e_j}{e_i}\\
+    &=\sum_i^n\alpha_i\delta_{ij}
+\end{align*}
+
+\begin{align*}
+    \braket{e_j}{\psi}=\alpha_j\\
+    \ketpsi=\sum_i^n\op{e_i}\ketpsi\\
+    \vu{I}=\sum_i^n\op{e_i}\qc\qq{Llamada la propiedad de clausura}
+\end{align*}
+
+Se tiene las siguientes propiedades
+\begin{enumerate}[a)]
+    \item $\ketpsi=\sum_i \ket{e_i}\braket{e_i}{\psi}$
+    Como $\brapsi=\ketpsi^*=(\sum_i \ket{e_i}\braket{e_i}{\psi})^*$
+    \item $\brapsi=\sum_i \braket{\psi}{e_i}\bra{e_i}$
+\end{enumerate}
+
+El mismo razonamiento se aplica para obtener una base para los bra en $\hilb^*$.
+
+\begin{example}
+    Calcular en la base $\{\ket{e_i}\}$, $\braket{\psi}$.
+    
+    \textit{Solución:}
+    
+    \begin{align*}
+        \braket{\psi}&=\qty\Bigg[\sum_i^n\braket{\psi}{e_i}\bra{e_i}]\qty\Bigg[\sum_j^n\ket{e_j}\braket{e_j}{\psi}]\\
+        &=\sum_{ij}^n\braket{\psi}{e_i}\bra{e_i}\ket{e_j}\braket{e_j}{\psi}\\
+        &=\sum_{ij}^n \braket{\psi}{e_i}\delta_{ij}\braket{e_j}{\psi}\\
+        &=\sum_i^n \braket{\psi}{e_i}\braket{e_i}{\psi}\\
+        &=\sum_i^n \braket{\psi}{e_i}\braket{\psi}{e_i}^*\\
+        &=\sum_i^n \norm{\braket{\psi}{e_i}}^2
+    \end{align*}
+\end{example}
+
+\begin{example}[Deber]
+      Calcular $\op{\psi}$ en $\{\ket{e_i}\}$.
+      
+    \textit{Solución:}
+    
+    Por responder
+\end{example}
+
+\begin{example}[Deber]
+      Sea $\vu{A}$ un operador hermítico asociado con el observable $A$. Calcular $\vu{A}\ketpsi$ en la base propia.
+      
+    \textit{Solución:}
+    
+    Por responder
+\end{example}
+
+\subsubsection{Valor medio de los observables}
+
+\begin{definition}[Ensemble]
+    Un conjunto de estados idénticos que sirven para analizar los posibles resultados en un sondeo.
+\end{definition}
+
+Sea un observable $A\then\vu{A}$ hermítico asociado. Sea, además, que nuestro sistema está en el estado $\ketpsi\in\hilb$. El conjunto
+
+
+Replicado $n$ veces en un \textit{ensemble} de $n$ elementos se procede a definir al valor medio de un observable.
+
+\begin{definition}[Valor medio del observable $A$]
+    $$
+    \expval{A}_{\ketpsi}=\frac{1}{n}\sum_{i=1}^nA_i
+    $$
+\end{definition}
+
+\begin{example}[Identidad del valor medio]
+      Muestre que:
+      $$
+        \expval{A}_{\ketpsi}=\frac{\expval{\vu{A}}{\psi}}{\braket{\psi}}
+      $$
+\end{example}
+
+\begin{example}[Valor medio en la base generadora]
+      Expresar $\expval{A}_{\ketpsi}$ en la base generadora $\qty{\ket{e_i}}$. Haga la supocisión de que $\braket{\pis}=1$.
+      
+      \textit{Solución}
+      
+      \begin{align*}
+          \expval{A}_{\ketpsi}&=\expval{\vu{A}}{\psi}\\
+          &=\expval{\vu{I}\vu{A}\vu{I}}{\psi}\\
+          &=\bra{\psi}\qty\Bigg(\sum_i\op{e_i})\vu{A}\qty\Bigg(\sum_j\op{e_j})\ket{\psi}\\
+          &=\sum_{ij}\braket{\psi}{\e_i}\bra{e_i}\vu{A}\ket{e_j}\braket{e_j}{\psi}
+      \end{align*}
+     Se puede entonces interpretar de la siguiente manera
+     
+     $$
+     \expval{A}_{\ketpsi}=\sum_{ij}\braket{\psi}{\e_i}A_{ij}\braket{e_j}{\psi}
+     $$
+     
+     Donde $A_{ij}=\bra{e_i}\vu{A}\ket{e_j}$.
+     
+     $$
+     A_{ij}=\mqty(A_{11}&A_{12}&...&A_{1n}\\A_{21}&A_{22}&\cdots&A_{2n}\\
+     \vdots&\vdots&\ddots&\vdots\\A_{n1}&A_{n2}&...&A_{nn})
+     $$
+     
+     que es la representación matricial del operador $\vu{A}$ en la base generadora $\qty{\ket{e_i}}$.
+\end{example}
+
+\subsubsection{Representación matricial de un estado \ketpsi}
+Sea $\ketpsi\in\hil$ con una base $\qty{\ket{e_i}}$. Entonces
+
+$$
+    \forall\ketpsi\in\hilb:\ketpsi=\sum_i^n\alpha_i\ket{a_i}\qq{con}\alpha_i=\braket{a_i}{\psi}
+$$
+
+Así los $\alpha_i$ son los elementos matriciales de $\ketpsi$.
+
+$$
+    \ketpsi=\mqty(\alpha_1\\\alpha_2\\\vdots\\\alpha_n)
+$$
+
+\begin{definition}[Desviación media estándar (dispersión)]
+    La dispersión i desviación cuadrática media de un observable $A$ para un sistema en el estado $\ketpsi$ está dada por:
+        \begin{equation}
+            \Delta A_{\ketpsi}=\sqrt{
+            \expval**{ \qty(\vu{A}-\expval{A}_{\ketpsi})^2}{\psi}
+            }
+            \label{eq:dest}
+        \end{equation}
+\end{definition}
+
+En forma reducida \autoref{eq:dest} queda:
+
+\begin{equation}
+            \Delta A_{\ketpsi}=\sqrt{\expval{\vu{A}^2}{\psi}-\expval{A}{\psi}^2}
+            \label{eq:dest2}
+        \end{equation}

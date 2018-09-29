@@ -1,0 +1,43 @@
+\printsymline{Z}{Z}{sZ}{atomic number}{1}
+\printsymline{N}{N}{sN}{number of neutrons}{1}
+\printsymline{\ensuremath{e}}{\ensuremath{e}}{se}{basic charge}{1}
+\printsymline{\ensuremath{\rho }}{\ensuremath{\rho }}{symr}{}{1}
+\printsymline{G}{G}{symC}{Conductancia}{1}
+\printsymline{R}{R}{symR}{Resistencia}{1}
+\printsymline{\textbf{F}}{\textbf{F}}{symF}{Fuerza}{1}
+\printsymline{\textbf{E}}{\textbf{E}}{symE}{Campo Eléctrico}{1}
+\printsymline{\textbf{B}}{\textbf{B}}{symB}{Campo Magnético}{1}
+\printsymline{\text{Schrödinger}}{\text{Schrödinger}}{perSch}{Schrödinger}{1}
+\printsymline{\ensuremath{\protect \relax \protect \begingroup \immediate \write \@unused   \def \MessageBreak  
+ \let \protect \edef  You're in trouble here.  Try typing  <return>  to proceed.\MessageBreak If that doesn't work, type  X <return>  to quit.  \errhelp \let \def \MessageBreak  
+                \def   \errmessage  LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help   \endgroup \relax {H}}}{\ensuremath{\protect \relax \protect \begingroup \immediate \write \@unused   \def \MessageBreak  
+ \let \protect \edef  You're in trouble here.  Try typing  <return>  to proceed.\MessageBreak If that doesn't work, type  X <return>  to quit.  \errhelp \let \def \MessageBreak  
+                \def   \errmessage  LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help   \endgroup \relax {H}}}{hilb}{Hilbert Space}{1}
+\printsymline{\ensuremath{\protect \relax \protect \begingroup \immediate \write \@unused   \def \MessageBreak  
+ \let \protect \edef  You're in trouble here.  Try typing  <return>  to proceed.\MessageBreak If that doesn't work, type  X <return>  to quit.  \errhelp \let \def \MessageBreak  
+                \def   \errmessage  LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help   \endgroup \relax {P}}}{\ensuremath{\protect \relax \protect \begingroup \immediate \write \@unused   \def \MessageBreak  
+ \let \protect \edef  You're in trouble here.  Try typing  <return>  to proceed.\MessageBreak If that doesn't work, type  X <return>  to quit.  \errhelp \let \def \MessageBreak  
+                \def   \errmessage  LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help   \endgroup \relax {P}}}{pro}{Hilbert Space}{1}
+\printsymline{\ensuremath{\bra {\psi }}}{\ensuremath{\bra {\psi }}}{brapsi}{Hilbert Space}{1}
+\printsymline{\ensuremath{\bra {\phi }}}{\ensuremath{\bra {\phi }}}{braphi}{Hilbert Space}{1}
+\printsymline{\ensuremath{\bra {\chi }}}{\ensuremath{\bra {\chi }}}{brachi}{Hilbert Space}{1}
+\printsymline{\ensuremath{\ket {\psi }}}{\ensuremath{\ket {\psi }}}{ketpsi}{Hilbert Space}{1}
+\printsymline{\ensuremath{\ket {\phi }}}{\ensuremath{\ket {\phi }}}{ketphi}{Hilbert Space}{1}
+\printsymline{\ensuremath{\ket {\chi }}}{\ensuremath{\ket {\chi }}}{ketchi}{Hilbert Space}{1}
+\printsymline{\ensuremath{\bra {\psi }\ket {\phi }}}{\ensuremath{\bra {\psi }\ket {\phi }}}{braketab}{Hilbert Space}{1}
+\printsymline{\ensuremath{\bra {\phi }\ket {\psi }}}{\ensuremath{\bra {\phi }\ket {\psi }}}{braketba}{Hilbert Space}{1}
+\printsymline{\ensuremath{\bra {\phi }\ket {\chi }}}{\ensuremath{\bra {\phi }\ket {\chi }}}{braketac}{Hilbert Space}{1}
+\printsymline{\ensuremath{\bra {\chi }\ket {\psi }}}{\ensuremath{\bra {\chi }\ket {\psi }}}{braketca}{Hilbert Space}{1}
+\printsymline{\ensuremath{\lambda }}{\ensuremath{\lambda }}{symlam}{Definition}{1}
