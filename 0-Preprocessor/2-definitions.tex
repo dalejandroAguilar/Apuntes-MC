@@ -1,3 +1,4 @@
+%!TEX root = ../main.tex
 %%colores definidos%%
 \definecolor{coolBlue}{RGB}{0, 84, 186}
 \definecolor{rojoHierro}{RGB}{240, 79, 41}
@@ -5,24 +6,23 @@
 \definecolor{rojoASTM}{RGB}{139, 21  , 26}
 \definecolor{ocre}{RGB}{243,102,25} % Define the orange color used for highlighting throughout the book
 %%Definiciones para autoref%%
- \def\equationautorefname~#1\null{%
-   (ec.#1)\null
- }
+\def\equationautorefname~#1\null{%
+    (ec.#1)\null
+}
 
- \def\figureautorefname~#1\null{%
-   (fig.#1)\null
- }
- 
- \def\subsubsectionautorefname~#1\null{
-    (sec.#1)\null
- }
- 
-%%Tipografía%%
-\newcommand*\tick{\item[\ding{51}] } %genera un visto
-\newcommand*\fail{\item[\ding{55}]} %genera una equis
-\newcommand*\bull{\item[$\bullet$]} %genera balas
- 
-%%Definiciones para paths%%
-\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
- 
- 
+\def\figureautorefname~#1\null{%
+    (fig.#1)\null
+}
+
+\def\subsubsectionautorefname~#1\null{
+        (sec.#1)\null
+    }
+
+    %%Tipografía%%
+    \newcommand*\tick{\item[\ding{51}] } %genera un visto
+    \newcommand*\fail{\item[\ding{55}]} %genera una equis
+    \newcommand*\bull{\item[$\bullet$]} %genera balas
+
+    %%Definiciones para paths%%
+    \graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+

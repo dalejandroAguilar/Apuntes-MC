@@ -1,4 +1,4 @@
-
+%!TEX root = ../main.tex
 \providecommand{\keywords}[1]{\textbf{Palabras clave---} #1}
 \newcommand{\enclose}[1]{\textcircled{\footnotesize #1}}
 \newcommand{\comillas}[1]{``#1''}
@@ -9,45 +9,44 @@
 
 \newcommand{\then}{\ensuremath{\rightarrow}}
 \newcommand{\scriptr}{\mathcalligra{r}\,}
-    
+
 \newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
 %--------------------
 
 \newenvironment{answer}
-    {\begin{tcolorbox}[breakable, enhanced jigsaw]}
-    {\end{tcolorbox}}
+{\begin{tcolorbox}[breakable, enhanced jigsaw]}
+        {\end{tcolorbox}}
 
 %--------------------------------------------------
 % Definition box
 \newmdenv[skipabove=7pt,
-skipbelow=7pt,
-rightline=false,
-leftline=true,
-topline=false,
-bottomline=false,
-linecolor=rojoASTM,
-innerleftmargin=5pt,
-innerrightmargin=5pt,
-innertopmargin=0pt,
-leftmargin=0cm,
-rightmargin=0cm,
-linewidth=4pt,
-innerbottommargin=0pt]{dBox}
+    skipbelow=7pt,
+    rightline=false,
+    leftline=true,
+    topline=false,
+    bottomline=false,
+    linecolor=rojoASTM,
+    innerleftmargin=5pt,
+    innerrightmargin=5pt,
+    innertopmargin=0pt,
+    leftmargin=0cm,
+    rightmargin=0cm,
+    linewidth=4pt,
+    innerbottommargin=0pt]{dBox}
 
 \newcounter{definition}[section]
 \newenvironment{definition}[1][]{\begin{dBox}\refstepcounter{definition}\par\medskip\noindent \textbf{\textcolor{rojoASTM}{Definicion~\thedefinition.} \textbf{#1:}}
-\rmfamily}{\medskip\end{dBox}}
+        \rmfamily}{\medskip\end{dBox}}
 \numberwithin{definition}{section}
 
 \newenvironment{recordar}
-    {\begin{tcolorbox}[breakable, enhanced jigsaw]\subsection*{Recordar:}}
-    {\end{tcolorbox}}
-    
+{\begin{tcolorbox}[breakable, enhanced jigsaw]\subsection*{Recordar:}}
+            {\end{tcolorbox}}
+
 \newcounter{example}[section]
 \newenvironment{example}[1][]{\begin{tcolorbox}[breakable, enhanced jigsaw] \refstepcounter{example}\par\medskip
- \noindent \textbf{\textcolor{rojoASTM}{Ejemplo~\theexample.}} \textbf{#1.}\\
-\rmfamily}
-{\end{tcolorbox} \medskip }
+        \noindent \textbf{\textcolor{rojoASTM}{Ejemplo~\theexample.}} \textbf{#1.}\\
+        \rmfamily}
+        {\end{tcolorbox} \medskip }
 \numberwithin{example}{section}
-
 

@@ -1,0 +1,31 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {0.1}Introducci\IeC {\'o}n}{1}{section.0.1}
+\contentsline {section}{\numberline {0.2}Espacios de Hilbert, Operadores, Notaci\IeC {\'o}n de Dirac}{1}{section.0.2}
+\contentsline {subsection}{\numberline {0.2.1}Espacios de Hibert}{1}{subsection.0.2.1}
+\contentsline {subsection}{\numberline {0.2.2}Notaci\IeC {\'o}n de Dirac}{1}{subsection.0.2.2}
+\contentsline {subsubsection}{Propiedades de los bra-kets}{1}{subsection.0.2.2}
+\contentsline {subsubsection}{Propiedades no permitidas}{2}{example.0.2.2}
+\contentsline {subsubsection}{Sentido f\IeC {\'\i }sico del producto interno}{3}{Item.20}
+\contentsline {subsubsection}{ii. Postulado}{3}{Item.22}
+\contentsline {subsubsection}{Valor medio de los observables}{5}{example.0.2.7}
+\contentsline {subsubsection}{Representaci\IeC {\'o}n matricial de un estado \relax \ensuremath {\ensuremath {\ket {\psi }}}\xspace \let \@@protect \let \@unexpandable@protect \afterassignment \let \@@protect \xdef yes{yes}}{6}{example.0.2.9}
+\contentsline {section}{\numberline {0.3}Representaci\IeC {\'o}n en las bases discretas}{6}{section.0.3}
+\contentsline {section}{\numberline {0.4}Representaci\IeC {\'o}n en las bases discretas}{6}{section.0.4}
+\contentsline {section}{\numberline {0.5}Representaci\IeC {\'o}n de Coordenadas, Momentos y Energ\IeC {\'\i }a (Teor\IeC {\'\i }a de Representaciones)}{6}{section.0.5}
+\contentsline {chapter}{\numberline {1}Postulados de la Mec\IeC {\'a}nica Cu\IeC {\'a}ntica}{7}{chapter.1}
+\contentsline {section}{\numberline {1.1}Observables y Esperables}{7}{section.1.1}
+\contentsline {section}{\numberline {1.2}Valores operables}{7}{section.1.2}
+\contentsline {section}{\numberline {1.3}Relaciones de incertidumbre}{7}{section.1.3}
+\contentsline {section}{\numberline {1.4}Medici\IeC {\'o}n en teor\IeC {\'\i }a cu\IeC {\'a}ntica}{7}{section.1.4}
+\contentsline {section}{\numberline {1.5}Primeros postulados}{7}{section.1.5}
+\contentsline {chapter}{\numberline {2}Evoluci\IeC {\'o}n Temporal de los Estados Cu\IeC {\'a}nticos}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Operadores de evoluci\IeC {\'o}n temporal}{9}{section.2.1}
+\contentsline {subsubsection}{iii Postulado}{11}{example.2.1.3}
+\contentsline {section}{\numberline {2.2}La ecuaci\IeC {\'o}n de \relax \ensuremath {\text {Schr\IeC {\"o}dinger}}\xspace \let \@@protect \let \@unexpandable@protect \afterassignment \let \@@protect \xdef yes{yes}}{12}{section.2.2}
+\contentsline {section}{\numberline {2.3}Conservaci\IeC {\'o}n de la probabilidad}{12}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Estados estacionarios}{12}{subsection.2.3.1}
+\contentsline {subsubsection}{iv) Postulado:}{12}{definition.2.3.1}
+\contentsline {subsubsection}{v) Postulado:}{14}{example.2.3.1}
+\contentsline {section}{\numberline {2.4}Operador de densidad}{14}{section.2.4}
+\contentsline {section}{\numberline {2.5}Evoluci\IeC {\'o}n temporal en los valores medios}{14}{section.2.5}
+\contentsline {chapter}{\numberline {3}Preface}{15}{chapter.3}
